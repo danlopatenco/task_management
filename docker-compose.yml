@@ -1,0 +1,30 @@
+version: "3.2"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - DEV=true
+    ports:
+      - "8585:8585"
+    volumes:
+      - .:/app
+    command: >
+      python manage.py runserver 0.0.0.0:8585
+    environment:
+      DB_HOST: db
+      DB_NAME: task_management
+      DB_USER: admin
+      DB_PASS: password
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+       - ./data/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: task_management
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password

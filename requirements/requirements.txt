@@ -1,0 +1,10 @@
+Django
+djangorestframework
+markdown
+django-filter
+djoser
+djangorestframework_simplejwt
+psycopg2-binary
+drf-yasg
+drf-nested-routers
+django-cors-headers
