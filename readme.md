@@ -37,11 +37,23 @@ After the containers are up and running, need to make the database ready to use:
 ```
 chmod 777 app_container.sh
 ```
-2. Enter the Django application container using the app_container.sh script:
+2. Run the docker-compose ps command to find the correct name of the app container:
+```
+docker-compose ps
+```
+3. Update the `app_container.sh` script. Open the script in a text editor and locate the line with `CONTAINER_NAME`. Replace the placeholder name with the actual name of the container that you found using docker-compose ps. For example, if the correct container name is `tasks_management_backend_app_1`, change the line to:
+```
+CONTAINER_NAME="tasks_management_backend_app_1"
+```
+4. Enter the Django application container using the app_container.sh script:
 ```
 ./app_container.sh
 ```
-3. Set up the database by running migrations:
+5. Run:
+```
+source .envrc
+```
+6. Set up the database by running migrations:
 ```
 ./manage.py migrate
 ```
