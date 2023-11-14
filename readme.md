@@ -8,8 +8,8 @@ Before begin, ensure that the following requirements:
 Docker and Docker Compose are installed on machine.
 Basic knowledge of Docker and containerization concepts.
 
-### Getting Started
-
+## Getting Started
+### Configuration
 1. Clone the repository to local machine:
 
 
@@ -19,15 +19,17 @@ Basic knowledge of Docker and containerization concepts.
 cp .envrc.example .envrc
 
 ```
-3. Build and run the containers using docker-compose:
+3. The `docker-compose.yml` file contains the configuration for the application and database services. If necessary, adjust the environment variables and other settings in this file and the `.envrc`.
+
+ Build and run the containers using docker-compose:
 ```
 docker-compose up --build
 ```
+After the build completes and the services are running, the application will be available at http://localhost:8585.
 
-The application will be accessible at http://localhost:8585.
+Once Docker Compose has successfully built and the containers are running, open another terminal window in the same directory to continue with the next steps for Database Initialization.
 
-### Configuration
-The `docker-compose.yml` file contains the configuration for the application and database services. If necessary, adjust the environment variables and other settings in this file and the `.envrc`.
+
 
 ### Database Initialization
 After the containers are up and running, need to make the database ready to use:
