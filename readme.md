@@ -243,9 +243,3 @@ Similar to task tracking, implement tracking of updates and comments at the proj
 
 
 These enhancements will contribute to a more dynamic and collaborative environment for project management, and we look forward to continually improving the tool to meet the needs of our users.
-
-## Front-end Repository
-
-The front-end part of the Tasks Management application is available on GitLab. You can access the repository at the following URL:
-
-[Tasks Management Front-end](https://gitlab.com/tasks_management/tasks_management_frontend)
